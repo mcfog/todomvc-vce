@@ -2,9 +2,7 @@
 var Store = require('./store');
 var Model = require('./model');
 
-var itemTpl = doT.template(
-	document.getElementById('todo-list-item').innerHTML,
-);
+var itemTpl = doT.template(document.getElementById('todo-list-item').innerHTML);
 var itemKeys = 'id title completed'.split(/ /);
 
 module.exports = {

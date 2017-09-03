@@ -45,7 +45,7 @@ module.exports = require('./vc').extend({
 
 			Promise.all(wait).then(function () {
 				(that.children.item || []).slice().forEach(function (child) {
-					let id = child.getId();
+					var id = child.getId();
 					if (!itemObj[id]) {
 						that.removeChild(child);
 					} else if (isItemFiltered(itemObj[id], that.filter)) {
