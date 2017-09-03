@@ -1,7 +1,16 @@
 {
   "private": true,
+  "scripts": {
+    "prepublish": "npm run build",
+    "watch": "webpack -w js/app.js dist/bundle.min.js",
+    "build": "webpack -p js/app.js dist/bundle.min.js"
+  },
   "dependencies": {
     "todomvc-app-css": "^2.0.0",
-    "todomvc-common": "^1.0.0"
+    "todomvc-common": "^1.0.0",
+    "vce": "^0.1.2"
+  },
+  "devDependencies": {
+    "webpack": "^3.5.5"
   }
 }
