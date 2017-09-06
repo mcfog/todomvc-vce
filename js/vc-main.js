@@ -78,7 +78,7 @@ module.exports = require('./vc').extend({
 		} else {
 			this.elList.appendChild(el);
 		}
-		return this.renderChildElement(el).then(function (child) {
+		return this.createChild(el).then(function (child) {
 			return child.on('destroy update', function () {
 				that.render();
 				that.emit('update');
